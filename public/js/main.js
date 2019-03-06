@@ -449,7 +449,7 @@ var Alert = new CustomAlert();
 
 // *******************socket functions***********************************************************
 
-document.getElementById('start').addEventListener("click", function () {
+function start() {
     document.getElementById('button').classList.add('buttonDisplay');
     document.getElementById('button').classList.remove('none-clase');
     document.getElementById('atak').classList.add('atakDisplay');
@@ -464,7 +464,7 @@ document.getElementById('start').addEventListener("click", function () {
     socket.emit('start', {
 
     })
-});
+};
 
 socket.on('start', function (data) {
     document.getElementById("field").innerHTML = "";
@@ -477,11 +477,11 @@ socket.on('start', function (data) {
 
 //********* */
 
-document.getElementById('button').addEventListener("click", function () {
+function changeTurn() {
     socket.emit('changeTurn', {
 
     })
-});
+};
 
 socket.on('changeTurn', function (data) {
     if (playerTurn == "rojo") {
@@ -515,11 +515,11 @@ socket.on('changeTurn', function (data) {
 
 //********* */
 
-document.getElementById('atak').addEventListener("click", function () {
+function atakFunction() {
     socket.emit('atakFunction', {
 
     })
-});
+};
 
 socket.on('atakFunction', function (data) {
     atak = true;
@@ -532,9 +532,9 @@ socket.on('atakFunction', function (data) {
 
 //******** */
 
-document.getElementById('move').addEventListener("click", function () {
+function moveFunction() {
     socket.emit('moveFunction', {})
-});
+};
 
 socket.on('moveFunction', function (data) {
     atak = false;
