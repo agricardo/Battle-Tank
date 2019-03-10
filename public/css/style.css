@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(../img/metal.jpg);
+    background-image: url('../img/metal.jpg');
     background-size: cover;
 
 }
@@ -24,7 +24,7 @@ body {
 }
 
 .field {
-    background-image: url(../img/background.jpg);
+    background-image: url('../img/background.jpg');
     background-size: cover;
     margin: 0 auto;
 }
